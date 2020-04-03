@@ -1,0 +1,1181 @@
+#!/bin/sh
+#SCRİPTİ Nihat Tufan 
+###############################################
+# Script Kodlayan: Tufansunucum
+# Ulaşmak için: fb.com/TufanSunucum
+###############################################
+
+###############################################
+
+scriptsurum="v1"
+
+guncelleme_kontrol="1"
+site="http://Tufansunucum.xyz/"	
+scriptversion="18"
+gecikme="2"
+
+yanlistus="echo -e '\033[0;33m########################################################'
+echo -e '#      \033[1;33mYanlış tuşlama yaptın. Script kapatılıyor.\033[0;33m      #'
+echo -e '########################################################\033[0m'"
+
+######################################################################################################################################
+
+sinusbot001="echo -e '\033[0;33m#############################################'
+echo -e '#      \033[1;33mSinusbot - 1 (\033[1;36m8087\033[1;33m) başlatıldı.\033[0;33m      #'
+echo -e '#############################################\033[0m'"
+
+sinusbot002="echo -e '\033[0;33m#############################################'
+echo -e '#      \033[1;33mSinusbot - 2 (\033[1;36m8088\033[1;33m) başlatıldı.\033[0;33m      #'
+echo -e '#############################################\033[0m'"
+
+sinusbot003="echo -e '\033[0;33m#############################################'
+echo -e '#      \033[1;33mSinusbot - 3 (\033[1;36m8089\033[1;33m) başlatıldı.\033[0;33m      #'
+echo -e '#############################################\033[0m'"
+
+dsinusbot001="echo -e '\033[0;33m#############################################'
+echo -e '#      \033[1;33mSinusbot - 1 (\033[1;36m8087\033[1;33m) durduruldu.\033[0;33m      #'
+echo -e '#############################################\033[0m'"
+
+dsinusbot002="echo -e '\033[0;33m#############################################'
+echo -e '#      \033[1;33mSinusbot - 2 (\033[1;36m8088\033[1;33m) durduruldu.\033[0;33m      #'
+echo -e '#############################################\033[0m'"
+
+dsinusbot003="echo -e '\033[0;33m#############################################'
+echo -e '#      \033[1;33mSinusbot - 3 (\033[1;36m8089\033[1;33m) durduruldu.\033[0;33m      #'
+echo -e '#############################################\033[0m'"
+
+rsinusbot001="echo -e '\033[0;33m#############################################'
+echo -e '#      \033[1;33mSinusbot - 1 (\033[1;36m8087\033[1;33m) resetlendi.\033[0;33m      #'
+echo -e '#############################################\033[0m'"
+
+rsinusbot002="echo -e '\033[0;33m#############################################'
+echo -e '#      \033[1;33mSinusbot - 2 (\033[1;36m8088\033[1;33m) resetlendi.\033[0;33m      #'
+echo -e '#############################################\033[0m'"
+
+rsinusbot003="echo -e '\033[0;33m#############################################'
+echo -e '#      \033[1;33mSinusbot - 3 (\033[1;36m8089\033[1;33m) resetlendi.\033[0;33m      #'
+echo -e '#############################################\033[0m'"
+
+if [ $guncelleme_kontrol -eq 1 ]; then
+	clear
+	su root -c "echo -e '\033[1;36mGüncelleme kontrolü yapılıyor..\033[0m'"
+	curl -s -k $gecikme --head $site/tufansunucum/free/tufansunucum.php | head -n 1 | grep "HTTP/1.[01] [2].." > /dev/$
+	if [ $? = 1 ];
+	then
+		su root -c "echo -e '\033[0;33m################################################'" 
+		su root -c "echo -e '#                                              #'" 
+		su root -c "echo -e '#                   \033[1;31m! HATA !\033[0;33m                   #'"
+		su root -c "echo -e '#     \033[1;33mKontrol yapılırken bir sorun oluştu.\033[0;33m     #'"
+		su root -c "echo -e '#              \033[1;31mwww.lastofdead.com\033[0;33m              #'"
+		su root -c "echo -e '#                                              #'" 
+		su root -c "echo -e '################################################\033[0m'"
+		su root -c "echo -e '\033[0;36m1) Düzeltmeyi Dene\033[0m'"
+		su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'"
+		read hatafix 
+		case $hatafix in 
+			1)
+				clear
+				su root -c "echo -e '\033[1;36mDüzeltme işlemi yapılıyor..\033[0m'"
+				apt-get -qq update -y
+				apt-get -qq install curl -y
+				apt-get -qq install wget -y
+				apt-get -qq install ca-certificates -y
+				su root -c "update-ca-certificates"
+				su root -c "echo -e '\033[0;33m##################################################################'" 
+				su root -c "echo -e '#                                                                #'" 
+				su root -c "echo -e '#                   \033[1;36mDüzeltme İşlemi Tamamlandı\033[0;33m                   #'"
+				su root -c "echo -e '#              \033[1;36mLütfen Scripti Tekrar Açmayı Deneyin\033[0;33m              #'"
+				su root -c "echo -e '#   \033[1;33mBir şekilde tekrar hata alırsanız, \033[0;36mcurl\033[1;33m bileşenini manuel\033[0;33m    #'"
+				su root -c "echo -e '#   \033[1;33molarak kurmanız gerekiyor. Bunu kendiniz yapabilir veya\033[0;33m      #'"
+				su root -c "echo -e '#   \033[1;33msunucuyu temin ettiğiniz firmaya bildirebilirsiniz.\033[0;33m          #'"
+				su root -c "echo -e '#   \033[1;33mLütfen bu konuda benden yardım istemeyin. Ben sadece script\033[0;33m  #'"
+				su root -c "echo -e '#   \033[1;33mhatalarından sorumluyum. Bu konuda aldığım mesajlara yanıt\033[0;33m   #'"
+				su root -c "echo -e '#   \033[1;33mvermeyeceğimi bilmenizi isterim.\033[0;33m                             #'"
+				su root -c "echo -e '#                       \033[1;31mwww.lastofdead.com\033[0;33m                       #'"
+				su root -c "echo -e '#                  \033[1;31mwww.facebook.com/LastOfDead\033[0;33m                   #'"
+				su root -c "echo -e '#                                                                #'" 
+				su root -c "echo -e '##################################################################\033[0m'"
+				exit 0
+			;;
+			0)
+				clear
+				exit 0
+			;;
+			*)
+				clear
+				su root -c "$yanlistus"
+				exit 0
+			;;
+		esac
+	else
+		sversion=$(wget $site/tufansunucum/free/tufansunucum.php?sversion -q -O -)
+		if [ $sversion -gt $scriptversion ];
+		then
+			rm tufansunucum
+			rm tufansunucum-exec
+			rm lod
+			rm lod-exec
+			clear
+			su root -c "echo -e '\033[0;33m######################################################'" 
+			su root -c "echo -e '#                                                    #'" 
+			su root -c "echo -e '#        \033[1;33mYeni versiyon mevcut. İndirmek için;\033[0;33m        #'"
+			su root -c "echo -e '#                 \033[1;31mwww.lastofdead.com\033[0;33m                 #'"
+			su root -c "echo -e '#                                                    #'" 
+			su root -c "echo -e '######################################################\033[0m'"
+			exit 0
+		else
+			su root -c "echo -e '\033[1;33mGüncel sürüm kullandığınız doğrulandı.\033[0m'"
+			sleep 2
+			clear
+			su root -c "echo -e '\033[0;33m#########################################'" 
+			su root -c "echo -e '#                                       #'" 
+			su root -c "echo -e '#          \033[1;33mScript by \033[1;36mLastOfDead\033[0;33m         #'" 
+			su root -c "echo -e '#              \033[1;33mSürüm: \033[1;36m$scriptsurum\033[0;33m            #'" 
+			su root -c "echo -e '#           \033[1;31mwww.lastofdead.com\033[0;33m          #'" 
+			su root -c "echo -e '#                                       #'" 
+			su root -c "echo -e '#########################################\033[0m'"
+			su root -c "echo -e '\033[0;36m1) Kurulum Bölümü\033[0m'" 
+			su root -c "echo -e '\033[0;36m2) Seçenekler Bölümü\033[0m'" 
+			su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'"
+			read scriptsec 
+			case $scriptsec in 
+				1)
+					clear
+					su root -c "echo -e '\033[1;36mVersiyon bilgileri alınıyor..\033[0m'"
+					sleep 1
+					tskontrol=$(wget $site/tufansunucum/free/kontrol.php?tskontrol -q -O -)
+					sinusbotkontrol=$(wget $site/tufansunucum/free/kontrol.php?sinusbotkontrol -q -O -)
+					clear
+					su root -c "echo -e '\033[0;33m#########################################'" 
+					su root -c "echo -e '#                                       #'" 
+					su root -c "echo -e '#           \033[1;31mwww.lastofdead.com\033[0;33m          #'" 
+					su root -c "echo -e '#                                       #'" 
+					su root -c "echo -e '#########################################\033[0m'"
+					su root -c "echo -e '\033[0;36m1) Orjinal Lisanslı Server - \033[1;33mSürüm: \033[1;31m$tskontrol\033[0m'" 
+					su root -c "echo -e '\033[0;36m2) Müzik Botu - \033[1;33mSürüm: \033[1;31m$sinusbotkontrol\033[0m'" 
+					su root -c "echo -e '\033[0;36m3) Temel Bileşenleri Kur\033[0m'"
+					su root -c "echo -e '\033[0;36m4) Hata Çözümleri\033[0m'"
+					su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'" 
+					read secenek 
+					case $secenek in 
+						1)
+							clear
+							cd
+							apt-get -qq install wget -y
+							clear
+							su root -c "echo -e '\033[1;33mServer dosyaları indiriliyor..\033[0m'"
+							sleep 1
+							wget -q $site/tufansunucum/special/ts3/server.tar.bz2 --no-check-certificate
+							su root -c "echo -e '\033[1;36mDosyalar başarıyla indirildi.\033[0m'"
+							sleep 1
+							tar -xjf server.tar.bz2
+							rm server.tar.bz2
+							grep -v '.*teamspeak.*' /etc/hosts > /etc/hosts_temporary
+							mv /etc/hosts_temporary /etc/hosts
+							grep -v '.*symcb.*' /etc/hosts > /etc/hosts_temporary
+							mv /etc/hosts_temporary /etc/hosts
+							grep -v '.*thawte.*' /etc/hosts > /etc/hosts_temporary
+							mv /etc/hosts_temporary /etc/hosts
+							grep -v '.*usertrust.*' /etc/hosts > /etc/hosts_temporary
+							mv /etc/hosts_temporary /etc/hosts
+							grep -v '.*elasticbeanstalk.*' /etc/hosts > /etc/hosts_temporary
+							mv /etc/hosts_temporary /etc/hosts
+							grep -v '.*ocsp\.digicert.com.*' /etc/hosts > /etc/hosts_temporary
+							mv /etc/hosts_temporary /etc/hosts
+							sed -i '1i127.0.0.1       teamspeak.com' /etc/hosts
+							sed -i '1i127.0.0.1       accounting.teamspeak.com' /etc/hosts
+							sed -i '1i127.0.0.1       backupaccounting.teamspeak.com' /etc/hosts
+							sed -i '1i# 127.0.0.1       blacklist.teamspeak.com' /etc/hosts
+							sed -i '1i127.0.0.1       ipcheck.teamspeak.com' /etc/hosts
+							sed -i '1i127.0.0.1       ocsp.digicert.com' /etc/hosts
+							sed -i '1i127.0.0.1       hardy.teamspeak.4players.de' /etc/hosts
+							sed -i '1i127.0.0.1       weblist.teamspeak.com' /etc/hosts
+							sed -i '1i127.0.0.1       reportpiracy-env.elasticbeanstalk.com' /etc/hosts
+							sed -i '1i127.0.0.1       elasticbeanstalk.com' /etc/hosts
+							sed -i '1i127.0.0.1       usertrust.com' /etc/hosts
+							sed -i '1i127.0.0.1       symcb.com' /etc/hosts
+							sed -i '1i127.0.0.1       thawte.com' /etc/hosts
+							cd /root/server
+							chmod 777 ts3server
+							chmod 777 ts3server_startscript.sh
+							chmod 777 AccountingServerEmulator-Linux
+							su root -c "./ts3server_startscript.sh start"
+						;;
+					###################################################################################################### 
+						2)
+							clear
+							su root -c "echo -e '\033[0;33m###############################################################'" 
+							su root -c "echo -e '#                                                             #'" 
+							su root -c "echo -e '#     \033[1;33mBotu kurmadan önce \033[1;36mTemel Bileşenleri\033[1;33m kurmalısınız. \033[0;33m     #'"
+							su root -c "echo -e '#     \033[1;33mAksi durumda kurulum hatalı olacak.\033[0;33m                     #'"
+							su root -c "echo -e '#                                                             #'" 
+							su root -c "echo -e '###############################################################\033[0m'"
+							su root -c "echo -e '\033[0;36m1) Temel Bileşenleri Kurdum\033[0m'" 
+							su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'" 
+							read temelbil
+							case $temelbil in
+								1)
+									clear
+									su root -c "echo -e '\033[0;33m######################################'"
+									su root -c "echo -e '#         \033[1;33mSinusbot kuruluyor.\033[0;33m        #'"
+									su root -c "echo -e '######################################\033[0m'"
+									cd /opt/
+									mkdir -p /opt/ts3soundboard1
+									cd /opt/ts3soundboard1
+									su root -c "echo -e '\033[1;35mBot dosyaları indiriliyor..\033[0m'"
+									sleep 1
+									wget -q https://www.sinusbot.com/dl/sinusbot-beta.tar.bz2 --no-check-certificate
+									su root -c "echo -e '\033[1;33mDosyalar başarıyla indirildi.\033[0m'"
+									sleep 2
+									tar -xjf sinusbot-beta.tar.bz2
+									rm sinusbot-beta.tar.bz2
+									cp config.ini.dist config.ini
+									wget -q http://dl.4players.de/ts/releases/3.0.19.4/TeamSpeak3-Client-linux_amd64-3.0.19.4.run --no-check-certificate
+									chmod 0755 TeamSpeak3-Client-linux_amd64-3.0.19.4.run
+									su root -c "echo -e '\033[1;36mİlk olarak \033[1;33mENTER\033[1;36m basın, sonra \033[1;33mq\033[1;36m, sonra \033[1;33my\033[1;36m yazıp \033[1;33mENTER\033[1;36m basın.\033[0m'"
+									su root -c "./TeamSpeak3-Client-linux_amd64-3.0.19.4.run"
+									cp plugin/libsoundbot_plugin.so /opt/ts3soundboard1/TeamSpeak3-Client-linux_amd64/plugins
+									chmod 755 sinusbot
+									sudo curl -s -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+									sudo chmod a+rx /usr/local/bin/youtube-dl
+									sed -i '1iYoutubeDLPath = "/usr/local/bin/youtube-dl"' /opt/ts3soundboard1/config.ini
+									sed -i -e "s/ts3soundboard/ts3soundboard1/g" "/opt/ts3soundboard1/config.ini"
+									cd /opt/
+									cp -r ts3soundboard1/ ts3soundboard2
+									cp -r ts3soundboard1/ ts3soundboard3
+									sed -i -e "s/ListenPort = 8087/ListenPort = 8088/g" "/opt/ts3soundboard2/config.ini"
+									sed -i -e "s/ListenPort = 8087/ListenPort = 8089/g" "/opt/ts3soundboard3/config.ini"
+									sed -i -e "s/ts3soundboard1/ts3soundboard2/g" "/opt/ts3soundboard2/config.ini"
+									sed -i -e "s/ts3soundboard1/ts3soundboard3/g" "/opt/ts3soundboard3/config.ini"
+									clear
+									su root -c "echo -e '\033[0;33m##############################################'" 
+									su root -c "echo -e '#                                            #'" 
+									su root -c "echo -e '#     \033[1;33mOlmasını İstediğiniz Şifreyi Girin\033[0;33m     #'"
+									su root -c "echo -e '#                                            #'" 
+									su root -c "echo -e '##############################################\033[0m'"
+									read sinusbotpw1
+									clear
+									cd /opt/ts3soundboard1/
+									su root -c "screen -A -m -d -S 'sinusbot001' ./sinusbot -RunningAsRootIsEvilAndIKnowThat -pwreset=$sinusbotpw1"
+									su root -c "$sinusbot001"
+									sleep 5
+									cd /opt/ts3soundboard2/
+									su root -c "screen -A -m -d -S 'sinusbot002' ./sinusbot -RunningAsRootIsEvilAndIKnowThat -pwreset=$sinusbotpw1"
+									echo ""
+									su root -c "$sinusbot002"
+									sleep 5
+									cd /opt/ts3soundboard3/
+									su root -c "screen -A -m -d -S 'sinusbot003' ./sinusbot -RunningAsRootIsEvilAndIKnowThat -pwreset=$sinusbotpw1"
+									echo ""
+									su root -c "$sinusbot003"
+									sleep 2
+									clear
+									su root -c "echo -e '\033[0;33m##########################################################################'" 
+									su root -c "echo -e '#                                                                        #'" 
+									su root -c "echo -e '#                      \033[1;31mSinusbot Kurulumu Tamamlandı\033[0;33m                      #'" 
+									su root -c "echo -e '#    \033[1;33mBot paneline ulaşmak için Teamspeak3 ipnizin sonuna\033[0;33m                 #'" 
+									su root -c "echo -e '#    \033[1;36m8087 ~ 8088 ~ 8089\033[0;33m                                                  #'" 
+									su root -c "echo -e '#    \033[1;33mportlarını koyarak panellere erişebilirsiniz.\033[0;33m                       #'" 
+									su root -c "echo -e '#    \033[1;32mÖRNEK:\033[1;36m \033[1;36mhttp://123.123.123.4:8087/\033[0;33m                                   #'" 
+									su root -c "echo -e '#    \033[1;33mHer porttan 2 bot, toplam 6 tane bot oluşturma hakkınız vardır.\033[0;33m     #'"
+									su root -c "echo -e '#                                \033[1;31mÖNEMLİ NOT\033[0;33m                              #'" 
+									su root -c "echo -e '#    \033[1;33mBelirlediğiniz şifre, tek kullanımlıktır. Bot paneline girip,\033[0;33m       #'" 
+									su root -c "echo -e '#    \033[1;33mUser Accounts (Kullanıcı Hesapları) bölümünden şifrenizi\033[0;33m            #'" 
+									su root -c "echo -e '#    \033[1;33mdeğiştirmeyi unutmayın. Aksi durumda, \033[1;36mSeçenekler Bölümü\033[1;33m\`nden\033[0;33m        #'" 
+									su root -c "echo -e '#    \033[1;33mşifrenizi sıfırlayabilirsiniz.\033[0;33m                                      #'" 
+									su root -c "echo -e '#                                                                        #'" 
+									su root -c "echo -e '##########################################################################\033[0m'"
+									su root -c "echo -e ''"
+									su root -c "echo -e '\033[1;36mKullanıcı Adı: \033[1;32madmin\033[1;36m ~ Şifre: \033[1;32m$sinusbotpw1\033[0m'" 
+									su root -c "echo -e ''"
+									exit 0
+								;;
+								0)
+									clear
+									exit 0
+								;;
+								*)
+									su root -c "$yanlistus"
+								;;
+							esac
+						;;
+						###################################################################################################### 
+						3)
+							clear
+							su root -c "echo -e '\033[0;33m#################################################'"
+							su root -c "echo -e '#         \033[1;33mTemel bileşenler yükleniyor..\033[0;33m         #'"
+							su root -c "echo -e '#################################################\033[0m'"
+							sleep 1
+							apt-get -qq install wget -y
+							apt-get -qq update && apt-get -qq upgrade -y && apt-get -qq install curl -y
+							apt-get -qq install curl -y
+							apt-get -qq install screen x11vnc xvfb libxcursor1 ca-certificates bzip2 psmisc libglib2.0-0 less -y
+							su root -c "update-ca-certificates"
+							apt-get -qq install youtube-dl -y
+							sudo youtube-dl --update
+							clear
+							su root -c "echo -e '\033[0;33m###########################################################'"
+							su root -c "echo -e '#         \033[1;33mTemel bileşenlerin yüklemesi tamamlandı.\033[0;33m        #'"
+							su root -c "echo -e '###########################################################\033[0m'"
+							exit 0
+						;;
+						###################################################################################################### 
+						4)
+							clear
+							su root -c "echo -e '\033[0;33m#########################################'" 
+							su root -c "echo -e '#                                       #'" 
+							su root -c "echo -e '#           \033[1;31mwww.lastofdead.com\033[0;33m          #'" 
+							su root -c "echo -e '#                                       #'" 
+					    	su root -c "echo -e '#########################################\033[0m'"
+							su root -c "echo -e '\033[0;36m1) Teamspeak 3\033[0m'"
+							su root -c "echo -e '\033[0;36m2) Sinusbot\033[0m'"
+							su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'"
+							read hatalar
+							case $hatalar in
+								1)
+									clear
+									su root -c "echo -e '\033[0;33m###################'" 
+									su root -c "echo -e '#                 #'" 
+									su root -c "echo -e '#   \033[1;36mTeamspeak 3\033[0;33m   #'" 
+									su root -c "echo -e '#                 #'" 
+									su root -c "echo -e '###################\033[0m'"
+									su root -c "echo -e '\033[0;36m1) 2 Saat Sonra Kapanma Sorunu\033[0m'"
+									su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'"
+									read hatalarts3
+									case $hatalarts3 in
+										1)
+											clear
+											su root -c "echo -e '\033[0;33m################################################'" 
+											su root -c "echo -e '#                                              #'" 
+											su root -c "echo -e '#   \033[1;33mBu İşlem \033[1;36mhosts\033[1;33m Dosyanızı Sıfırlayacaktır\033[0;33m   #'" 
+											su root -c "echo -e '#                                              #'" 
+											su root -c "echo -e '################################################\033[0m'"
+											su root -c "echo -e '\033[0;36m1) Onaylıyorum\033[0m'"
+											su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'"
+											read hatalar1
+											case $hatalar1 in
+												1)
+													clear
+													cd /root/server/
+													su root -c "./ts3server_startscript.sh stop"
+													su root -c "/etc/init.d/teamspeak stop"
+													clear
+													cd /etc/
+													mv hosts hosts.lod
+													wget -q $site/tufansunucum/free/ts3/hosts --no-check-certificate
+													clear
+													su root -c "echo -e '\033[0;33m############################################'"
+													su root -c "echo -e '#                                          #'"
+													su root -c "echo -e '#            \033[1;31mwww.lastofdead.com\033[0;33m            #'"
+													su root -c "echo -e '#        \033[1;33mKapanma Problemi Düzeltildi\033[0;33m       #'"
+													su root -c "echo -e '#   \033[1;36mTeamspeak 3 Serveri Yeniden Başlatın\033[0;33m   #'"
+													su root -c "echo -e '#                                          #'"
+													su root -c "echo -e '############################################\033[0m'"
+													exit 0
+												;;
+												0)
+													clear
+													exit 0
+												;;
+												*)
+													clear
+													su root -c "$yanlistus"
+													exit 0
+												;;
+											esac
+										;;
+										0)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								2)
+									clear
+									su root -c "echo -e '\033[0;33m##################'" 
+									su root -c "echo -e '#                #'" 
+									su root -c "echo -e '#    \033[1;36mSinusbot\033[0;33m    #'" 
+									su root -c "echo -e '#                #'" 
+									su root -c "echo -e '##################\033[0m'"
+									su root -c "echo -e '\033[0;36m1) LogLevel Sorunu\033[0m'"
+									su root -c "echo -e '\033[0;36m2) youtube-dl not available Sorunu\033[0m'"
+									su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'"
+									read hatalarsb
+									case $hatalarsb in
+									#-------------------------------------------------------------------------------#
+										1)
+											clear
+											sed -i -e "s/LogLevel = 3/LogLevel = 10/g" "/opt/ts3soundboard1/config.ini"
+											sed -i -e "s/LogLevel = 3/LogLevel = 10/g" "/opt/ts3soundboard2/config.ini"
+											sed -i -e "s/LogLevel = 3/LogLevel = 10/g" "/opt/ts3soundboard3/config.ini"
+											clear
+											su root -c "echo -e '\033[0;33m#############################################################'" 
+											su root -c "echo -e '#                                                           #'" 
+											su root -c "echo -e '#   \033[1;33mLogLevel sorunu giderildi. Lütfen botları resetleyin.\033[0;33m   #'"
+											su root -c "echo -e '#                                                           #'" 
+											su root -c "echo -e '#############################################################\033[0m'"
+											exit 0
+										;;
+										#-------------------------------------------------------------------------------#
+										2)
+											clear
+											apt-get install bzip2 -y
+											clear
+											cd /usr/local/bin/
+											rm youtube-dl
+											su root -c "echo -e '\033[1;33mDosyalar indiriliyor..\033[0m'"
+											sleep 1
+											sudo wget -q $site/tufansunucum/free/sinusbot/youtube-dl.tar.bz2 --no-check-certificate
+											su root -c "echo -e '\033[1;36mDosyalar başarıyla indirildi.\033[0m'"
+											sleep 2
+											tar -xjf youtube-dl.tar.bz2
+											sudo chmod a+x youtube-dl
+											rm youtube-dl.tar.bz2
+											clear
+											su root -c "echo -e '\033[0;33m###############################################################'" 
+											su root -c "echo -e '#                                                             #'" 
+											su root -c "echo -e '#   \033[1;33myoutube-dl sorunu giderildi. Lütfen botları resetleyin.\033[0;33m   #'"
+											su root -c "echo -e '#                                                             #'" 
+											su root -c "echo -e '###############################################################\033[0m'"
+											exit 0
+										;;
+										0)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								0)
+									clear
+									exit 0
+								;;
+								*)
+									clear
+									su root -c "$yanlistus"
+									exit 0
+								;;
+							esac
+						;;
+						0) 
+							clear
+							exit 0
+						;; 
+						*) 
+							clear
+							su root -c "$yanlistus"
+							exit 0
+						;;
+					esac
+				;;
+				2)
+					clear
+					su root -c "echo -e '\033[0;33m#########################################'" 
+					su root -c "echo -e '#                                       #'" 
+					su root -c "echo -e '#           \033[1;31mwww.lastofdead.com\033[0;33m          #'" 
+					su root -c "echo -e '#                                       #'" 
+					su root -c "echo -e '#########################################\033[0m'"
+					su root -c "echo -e '\033[0;36m1) Teamspeak3\033[0m'" 
+					su root -c "echo -e '\033[0;36m2) Sinusbot\033[0m'" 
+					su root -c "echo -e '\033[0;36m3) Screen Sıfırla\033[0m'" 
+					su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'" 
+					read sec 
+					case $sec in 
+					###################################################################################################### 
+						1)
+							clear
+							su root -c "echo -e '\033[0;33m##########################'" 
+							su root -c "echo -e '#                        #'" 
+							su root -c "echo -e '#      \033[1;36mTeamspeak 3\033[0;33m       #'" 
+							su root -c "echo -e '#                        #'" 
+							su root -c "echo -e '##########################\033[0m'"
+							su root -c "echo -e '\033[0;36m1) Durum Bilgisi\033[0m'" 
+							su root -c "echo -e '\033[0;36m2) Durdur\033[0m'" 
+							su root -c "echo -e '\033[0;36m3) Başlat\033[0m'" 
+							su root -c "echo -e '\033[0;36m4) Yeniden Başlat\033[0m'"
+							su root -c "echo -e '\033[0;36m5) Serveri Sil\033[0m'" 
+							su root -c "echo -e '\033[0;36m6) Server Güncelle\033[0m'" 
+							su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'" 
+							read ts3sec
+							case $ts3sec in
+								1)
+									clear
+									cd /root/server/
+									su root -c "./ts3server_startscript.sh status"
+								;;
+								2)
+									clear
+									cd /root/server/
+									su root -c "./ts3server_startscript.sh stop"
+								;;
+								3)
+									clear
+									cd /root/server/
+									su root -c "./ts3server_startscript.sh start"
+								;;
+								4)
+									clear
+									cd /root/server/
+									su root -c "./ts3server_startscript.sh restart"
+								;;
+								5)
+									clear
+									su root -c "echo -e '\033[0;33m########################################################'" 
+									su root -c "echo -e '#                                                      #'" 
+									su root -c "echo -e '#     \033[1;33mServeri silmek istediğinize emin misiniz?\033[0;33m        #'"
+									su root -c "echo -e '#                                                      #'" 
+									su root -c "echo -e '########################################################\033[0m'"
+									su root -c "echo -e '\033[0;36m1) Evet\033[0m'" 
+									su root -c "echo -e '\033[0;36m2) Hayır\033[0m'"
+									read serversil
+									case $serversil in
+										1)
+											clear
+											cd /root/server/
+											su root -c "./ts3server_startscript.sh stop"
+											cd /root/
+											rm -r server
+											clear
+											su root -c "echo -e '\033[0;33m################################################'" 
+											su root -c "echo -e '#                                              #'" 
+											su root -c "echo -e '#     \033[1;33mTeamspeak 3 silme işlemi tamamlandı.\033[0;33m     #'"
+											su root -c "echo -e '#                                              #'" 
+											su root -c "echo -e '################################################\033[0m'"
+											exit 0
+										;;
+										2)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								6)
+									clear
+									su root -c "echo -e '\033[1;36mVeriler alınıyor..\033[0m'"
+									sleep 2
+									tskontrol=$(wget $site/tufansunucum/free/kontrol.php?tsguncelle -q -O -)
+									tstarih=$(wget $site/tufansunucum/free/kontrol.php?tstarih -q -O -)
+									clear
+									su root -c "echo -e '\033[0;33m######################################'" 
+									su root -c "echo -e '#                                    #'" 
+									su root -c "echo -e '#         \033[1;36mwww.lastofdead.com\033[0;33m         #'"
+									su root -c "echo -e '#    \033[1;33mKurulacak Versiyon: \033[1;31m$tskontrol\033[0;33m    #'"
+									su root -c "echo -e '#   \033[1;33mGüncellenme Tarihi: \033[1;31m$tstarih\033[0;33m   #'"
+									su root -c "echo -e '#                                    #'" 
+									su root -c "echo -e '######################################\033[0m'"
+									su root -c "echo -e '\033[0;36m1) Kur\033[0m'"
+									su root -c "echo -e '\033[0;36m2) Yedek Geri Yükle\033[0m'"
+									su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'"
+									read tsguncelle
+									case $tsguncelle in
+										1)
+											clear
+											cd /root/server/
+											su root -c "./ts3server_startscript.sh stop"
+											su root -c "/etc/init.d/teamspeak stop"
+											clear
+											su root -c "echo -e '\033[1;33mYedek alınıyor..\033[0m'"
+											sleep 1
+											cd /root/
+											mkdir server-yedek
+											tar -cvjSf server-yedek.tar.bz2 server
+											mv server-yedek.tar.bz2 server-yedek
+											clear
+											su root -c "echo -e '\033[1;36mYedek alımı tamamlandı.\033[0m'"
+											sleep 1
+											su root -c "echo -e '\033[1;33mServer dosyaları indiriliyor..\033[0m'"
+											sleep 1
+											cd /root/server/
+											wget -q $site/tufansunucum/special/ts3/tsguncelle.tar.bz2 --no-check-certificate
+											su root -c "echo -e '\033[1;36mDosyalar başarıyla indirildi.\033[0m'"
+											sleep 1
+											su root -c "echo -e '\033[1;33mGüncelleme başlıyor..\033[0m'"
+											sleep 1
+											clear
+											tar -xjf tsguncelle.tar.bz2
+											rm tsguncelle.tar.bz2
+											chmod 777 ts3server ts3server_startscript.sh AccountingServerEmulator-Linux
+											su root -c "./ts3server_startscript.sh start"
+										;;
+										2)
+											clear
+											cd /root/server/
+											su root -c "./ts3server_startscript.sh stop"
+											clear
+											cd /root/
+											rm -r server
+											cp /root/server-yedek/server-yedek.tar.bz2 /root/
+											tar -xjf server-yedek.tar.bz2
+											rm server-yedek.tar.bz2
+											cd /root/server/
+											su root -c "./ts3server_startscript.sh start"
+										;;
+										0)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								0)
+									clear
+									exit 0
+								;;
+								*)
+									clear
+									su root -c "$yanlistus"
+									exit 0
+								;;
+							esac
+						;;
+					###################################################################################################### 
+						2)
+						
+							clear
+							su root -c "echo -e '\033[0;33m##########################'" 
+							su root -c "echo -e '#                        #'" 
+							su root -c "echo -e '#        \033[1;36mSinusbot\033[0;33m        #'" 
+							su root -c "echo -e '#                        #'" 
+							su root -c "echo -e '##########################\033[0m'"
+							su root -c "echo -e '\033[0;36m1) Tumünü Durdur\033[0m'" 
+							su root -c "echo -e '\033[0;36m2) Tümünü Başlat\033[0m'" 
+							su root -c "echo -e '\033[0;36m3) Panel Şifrelerini Sıfırla\033[0m'" 
+							su root -c "echo -e '\033[0;36m4) İstediğin Botu Başlat\033[0m'" 
+							su root -c "echo -e '\033[0;36m5) İstediğin Botu Durdur\033[0m'" 
+							su root -c "echo -e '\033[0;36m6) İstediğin Botu Yeniden Başlat\033[0m'" 
+							su root -c "echo -e '\033[0;36m7) İstediğin Botun Şifresini Sıfırla\033[0m'" 
+							su root -c "echo -e '\033[0;36m8) Botları Sil\033[0m'" 
+							su root -c "echo -e '\033[0;36m9) Bot Güncelleme\033[0m'" 
+							su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'" 
+							read botsec
+							case $botsec in
+								1)
+									clear
+									su root -c "screen -X -S 'sinusbot001' quit"
+									su root -c "screen -X -S 'sinusbot002' quit"
+									su root -c "screen -X -S 'sinusbot003' quit"
+									su root -c "echo -e '\033[0;33m##############################'" 
+									su root -c "echo -e '#                            #'" 
+									su root -c "echo -e '#     \033[1;33mBotlar durduruldu.\033[0;33m     #'"
+									su root -c "echo -e '#                            #'" 
+									su root -c "echo -e '##############################\033[0m'"
+									exit 0
+								;;
+								2)
+									cd
+									clear
+									cd /opt/ts3soundboard1/
+									su root -c "screen -A -m -d -S 'sinusbot001' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+									su root -c "$sinusbot001"
+									sleep 2
+									cd /opt/ts3soundboard2/
+									su root -c "screen -A -m -d -S 'sinusbot002' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+									echo ""
+									su root -c "$sinusbot002"
+									sleep 2
+									cd /opt/ts3soundboard3/
+									su root -c "screen -A -m -d -S 'sinusbot003' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+									echo ""
+									su root -c "$sinusbot003"
+									sleep 2
+									clear
+									su root -c "echo -e '\033[0;33m##############################'" 
+									su root -c "echo -e '#                            #'" 
+									su root -c "echo -e '#     \033[1;33mBotlar başlatıldı.\033[0;33m     #'"
+									su root -c "echo -e '#                            #'" 
+									su root -c "echo -e '##############################\033[0m'"
+									exit 0
+								;;
+								3)
+									clear
+									su root -c "echo -e '\033[0;33m##############################################'" 
+									su root -c "echo -e '#                                            #'" 
+									su root -c "echo -e '#     \033[1;33mOlmasını İstediğiniz Şifreyi Girin\033[0;33m     #'"
+									su root -c "echo -e '#                                            #'" 
+									su root -c "echo -e '##############################################\033[0m'"
+									read sinusbotpw3
+									if [ ! -d "$sinusbotpw3" ]
+									then
+										clear
+										su root -c "screen -X -S 'sinusbot001' quit"
+										su root -c "screen -X -S 'sinusbot002' quit"
+										su root -c "screen -X -S 'sinusbot003' quit"
+										clear
+										su root -c "echo -e '\033[0;33m##################################'" 
+										su root -c "echo -e '#                                #'" 
+										su root -c "echo -e '#     \033[1;33mTüm botlar durduruldu.\033[0;33m     #'"
+										su root -c "echo -e '#                                #'" 
+										su root -c "echo -e '##################################\033[0m'"
+										sleep 2
+										clear
+										cd /opt/ts3soundboard1/
+										su root -c "screen -A -m -d -S 'sinusbot001' ./sinusbot -RunningAsRootIsEvilAndIKnowThat -pwreset=$sinusbotpw3"
+										su root -c "$sinusbot001"
+										sleep 2
+										cd /opt/ts3soundboard2/
+										su root -c "screen -A -m -d -S 'sinusbot002' ./sinusbot -RunningAsRootIsEvilAndIKnowThat -pwreset=$sinusbotpw3"
+										echo ""
+										su root -c "$sinusbot002"
+										sleep 2
+										cd /opt/ts3soundboard3/
+										su root -c "screen -A -m -d -S 'sinusbot003' ./sinusbot -RunningAsRootIsEvilAndIKnowThat -pwreset=$sinusbotpw3"
+										echo ""
+										su root -c "$sinusbot003"
+										sleep 2
+										clear
+										su root -c "echo -e '\033[0;33m#########################################################################'" 
+										su root -c "echo -e '#                                                                       #'" 
+										su root -c "echo -e '#                         \033[1;33mTüm botlar başlatıldı.\033[0;33m                        #'"
+										su root -c "echo -e '#                                \033[1;31mÖNEMLİ NOT\033[0;33m                             #'" 
+										su root -c "echo -e '#    \033[1;32mBelirlediğiniz şifre, tek kullanımlıktır. Bot paneline girip,\033[0;33m      #'" 
+										su root -c "echo -e '#    \033[1;32mUser Accounts (Kullanıcı Hesapları) bölümünden şifrenizi\033[0;33m           #'" 
+										su root -c "echo -e '#    \033[1;33mdeğiştirmeyi unutmayın. Aksi durumda, \033[1;36mSeçenekler Bölümü\033[1;33m\`nden\033[0;33m       #'" 
+										su root -c "echo -e '#    \033[1;33mşifrenizi sıfırlayabilirsiniz.\033[0;33m                                     #'" 
+										su root -c "echo -e '#                                                                       #'" 
+										su root -c "echo -e '#########################################################################\033[0m'"
+										su root -c "echo -e ''"
+										su root -c "echo -e '\033[1;32mBelirlediğiniz Şifre: \033[1;36m$sinusbotpw3\033[0m'"
+										su root -c "echo -e ''"							
+										exit 0
+									else
+										clear
+										su root -c "$yanlistus"
+										exit 0
+									fi
+								;;
+								4)
+									cd
+									clear
+									su root -c "echo -e '\033[0;33m##################################################'" 
+									su root -c "echo -e '#                                                #'" 
+									su root -c "echo -e '#     \033[1;33mBaşlatmak istediğin botun portunu yaz.\033[0;33m     #'"
+									su root -c "echo -e '#     \033[1;33mÖrnek: \033[1;36m8087\033[0;33m                                #'"
+									su root -c "echo -e '#     \033[1;33mÇıkış yapmak için \033[1;36m0\033[1;33m tuşuna bas.\033[0;33m            #'"
+									su root -c "echo -e '#                                                #'" 
+									su root -c "echo -e '##################################################\033[0m'"
+									read botport
+									case $botport in
+										8087)
+											clear
+											cd /opt/ts3soundboard1/
+											su root -c "screen -A -m -d -S 'sinusbot001' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+											su root -c "$sinusbot001"							
+										;;
+										8088)
+											clear
+											cd /opt/ts3soundboard2/
+											su root -c "screen -A -m -d -S 'sinusbot002' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+											su root -c "$sinusbot002"							
+										;;
+										8089)
+											clear
+											cd /opt/ts3soundboard3/
+											su root -c "screen -A -m -d -S 'sinusbot003' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+											su root -c "$sinusbot003"							
+										;;
+										0)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								5)
+									cd
+									clear
+									su root -c "echo -e '\033[0;33m##################################################'" 
+									su root -c "echo -e '#                                                #'" 
+									su root -c "echo -e '#     \033[1;33mDurdurmak istediğin botun portunu yaz.\033[0;33m     #'"
+									su root -c "echo -e '#     \033[1;33mÖrnek: \033[1;36m8087\033[0;33m                                #'"
+									su root -c "echo -e '#     \033[1;33mÇıkış yapmak için \033[1;36m0\033[1;33m tuşuna bas.\033[0;33m            #'"
+									su root -c "echo -e '#                                                #'" 
+									su root -c "echo -e '##################################################\033[0m'"
+									read botport2
+									case $botport2 in
+										8087)
+											clear
+											su root -c "screen -X -S 'sinusbot001' quit"
+											su root -c "$dsinusbot001"
+										;;
+										8088)
+											clear
+											su root -c "screen -X -S 'sinusbot002' quit"
+											su root -c "$dsinusbot002"
+										;;
+										8089)
+											clear
+											su root -c "screen -X -S 'sinusbot003' quit"
+											su root -c "$dsinusbot003"
+										;;
+										0)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								6)
+									cd
+									clear
+									su root -c "echo -e '\033[0;33m##################################################'" 
+									su root -c "echo -e '#                                                #'" 
+									su root -c "echo -e '#     \033[1;33mResetlemek istediğin botun portunu yaz.\033[0;33m    #'"
+									su root -c "echo -e '#     \033[1;33mÖrnek: \033[1;36m8087\033[0;33m                                #'"
+									su root -c "echo -e '#     \033[1;33mÇıkış yapmak için \033[1;36m0\033[1;33m tuşuna bas.\033[0;33m            #'"
+									su root -c "echo -e '#                                                #'" 
+									su root -c "echo -e '##################################################\033[0m'"
+									read botport3
+									case $botport3 in
+										8087)
+											clear
+											su root -c "screen -X -S 'sinusbot001' quit"
+											cd /opt/ts3soundboard1/
+											su root -c "screen -A -m -d -S 'sinusbot001' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+											su root -c "$rsinusbot001"
+										;;
+										8088)
+											clear
+											su root -c "screen -X -S 'sinusbot002' quit"
+											cd /opt/ts3soundboard2/
+											su root -c "screen -A -m -d -S 'sinusbot002' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+											su root -c "$rsinusbot002"
+										
+										;;
+										8089)
+											clear
+											su root -c "screen -X -S 'sinusbot003' quit"
+											cd /opt/ts3soundboard3/
+											su root -c "screen -A -m -d -S 'sinusbot003' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+											su root -c "$rsinusbot003"
+										;;
+										0)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								7)
+									cd
+									clear
+									su root -c "echo -e '\033[0;33m############################################################'" 
+									su root -c "echo -e '#                                                          #'" 
+									su root -c "echo -e '#     \033[1;33mŞifresini sıfırlamak istediğin botun portunu yaz.\033[0;33m    #'"
+									su root -c "echo -e '#     \033[1;33mÖrnek: \033[1;36m8087\033[0;33m                                          #'"
+									su root -c "echo -e '#     \033[1;33mÇıkış yapmak için \033[1;36m0\033[1;33m tuşuna bas.\033[0;33m                      #'"
+									su root -c "echo -e '#                                                          #'" 
+									su root -c "echo -e '############################################################\033[0m'"
+									read botport3
+									case $botport3 in
+										8087)
+											clear
+											su root -c "echo -e '\033[0;33m##############################################'" 
+											su root -c "echo -e '#                                            #'" 
+											su root -c "echo -e '#     \033[1;33mOlmasını İstediğiniz Şifreyi Girin\033[0;33m     #'"
+											su root -c "echo -e '#                                            #'" 
+											su root -c "echo -e '##############################################\033[0m'"
+											read rsinusbotpw1
+											if [ ! -d "$rsinusbotpw1" ]
+											then
+												clear
+												su root -c "screen -X -S 'sinusbot001' quit"
+												cd /opt/ts3soundboard1/
+												su root -c "screen -A -m -d -S 'sinusbot001' ./sinusbot -RunningAsRootIsEvilAndIKnowThat -pwreset=$rsinusbotpw1"
+												su root -c "$rsinusbot001"
+												su root -c "echo -e ''"
+												su root -c "echo -e '\033[1;36mKullanıcı Adı: \033[1;32madmin\033[1;36m ~ Şifre: \033[1;32m$rsinusbotpw1\033[0m'" 
+												su root -c "echo -e ''"
+
+											else
+												clear
+												su root -c "$yanlistus"
+												exit 0
+											fi
+										;;
+										8088)
+											clear
+											su root -c "echo -e '\033[0;33m##############################################'" 
+											su root -c "echo -e '#                                            #'" 
+											su root -c "echo -e '#     \033[1;33mOlmasını İstediğiniz Şifreyi Girin\033[0;33m     #'"
+											su root -c "echo -e '#                                            #'" 
+											su root -c "echo -e '##############################################\033[0m'"
+											read rsinusbotpw2
+											if [ ! -d "$rsinusbotpw2" ]
+											then
+												clear
+												su root -c "screen -X -S 'sinusbot002' quit"
+												cd /opt/ts3soundboard2/
+												su root -c "screen -A -m -d -S 'sinusbot002' ./sinusbot -RunningAsRootIsEvilAndIKnowThat -pwreset=$rsinusbotpw2"
+												su root -c "$rsinusbot002"
+												su root -c "echo -e ''"
+												su root -c "echo -e '\033[1;36mKullanıcı Adı: \033[1;32madmin\033[1;36m ~ Şifre: \033[1;32m$rsinusbotpw2\033[0m'" 
+												su root -c "echo -e ''"
+											else
+												clear
+												su root -c "$yanlistus"
+												exit 0
+											fi
+										;;
+										8089)
+											clear
+											su root -c "echo -e '\033[0;33m##############################################'" 
+											su root -c "echo -e '#                                            #'" 
+											su root -c "echo -e '#     \033[1;33mOlmasını İstediğiniz Şifreyi Girin\033[0;33m     #'"
+											su root -c "echo -e '#                                            #'" 
+											su root -c "echo -e '##############################################\033[0m'"
+											read rsinusbotpw3
+											if [ ! -d "$rsinusbotpw3" ]
+											then
+												clear
+												su root -c "screen -X -S 'sinusbot003' quit"
+												cd /opt/ts3soundboard3/
+												su root -c "screen -A -m -d -S 'sinusbot003' ./sinusbot -RunningAsRootIsEvilAndIKnowThat -pwreset=$rsinusbotpw3"
+												su root -c "$rsinusbot003"
+												su root -c "echo -e ''"
+												su root -c "echo -e '\033[1;36mKullanıcı Adı: \033[1;32madmin\033[1;36m ~ Şifre: \033[1;32m$rsinusbotpw3\033[0m'" 
+												su root -c "echo -e ''"
+											else
+												clear
+												su root -c "$yanlistus"
+												exit 0
+											fi
+										;;
+										0)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								8)
+									clear
+									su root -c "echo -e '\033[0;33m########################################################'" 
+									su root -c "echo -e '#                                                      #'" 
+									su root -c "echo -e '#     \033[1;33mBotları silmek istediğinize emin misiniz?\033[0;33m        #'"
+									su root -c "echo -e '#                                                      #'" 
+									su root -c "echo -e '########################################################\033[0m'"
+									su root -c "echo -e '\033[0;36m1) Evet\033[0m'" 
+									su root -c "echo -e '\033[0;36m0) Hayır\033[0m'"
+									read botsil
+									case $botsil in
+										1)
+											clear
+											su root -c "echo -e '\033[0;33m#################################'" 
+											su root -c "echo -e '#                               #'" 
+											su root -c "echo -e '#     \033[1;33mBotlar siliniyor..\033[0;33m        #'"
+											su root -c "echo -e '#                               #'" 
+											su root -c "echo -e '#################################\033[0m'"
+											su root -c "screen -X -S 'sinusbot001' quit"
+											su root -c "screen -X -S 'sinusbot002' quit"
+											su root -c "screen -X -S 'sinusbot003' quit"
+											cd /opt/
+											rm -r ts3soundboard1
+											echo -n "."
+											sleep 1
+											rm -r ts3soundboard2
+											echo -n "."
+											sleep 1
+											rm -r ts3soundboard3
+											echo -n "."
+											sleep 1
+											clear
+											su root -c "echo -e '\033[0;33m###############################'" 
+											su root -c "echo -e '#                             #'" 
+											su root -c "echo -e '#     \033[1;33mBotlar silinmiştir.\033[0;33m     #'"
+											su root -c "echo -e '#                             #'" 
+											su root -c "echo -e '###############################\033[0m'"
+											exit 0
+										;;
+										0)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								9)
+									clear
+									su root -c "echo -e '\033[1;36mVeriler alınıyor..\033[0m'"
+									sleep 2
+									botkontrol=$(wget $site/tufansunucum/free/kontrol.php?botguncelle -q -O -)
+									bottarih=$(wget $site/tufansunucum/free/kontrol.php?bottarih -q -O -)
+									clear
+									su root -c "echo -e '\033[0;33m######################################'" 
+									su root -c "echo -e '#                                    #'" 
+									su root -c "echo -e '#         \033[1;36mwww.Tufansunucum.com\033[0;33m         #'"
+									su root -c "echo -e '#    \033[1;33mKurulacak Versiyon: \033[1;31m$botkontrol\033[0;33m    #'"
+									su root -c "echo -e '#   \033[1;33mGüncellenme Tarihi: \033[1;31m$bottarih\033[0;33m   #'"
+									su root -c "echo -e '#                                    #'" 
+									su root -c "echo -e '######################################\033[0m'"
+									su root -c "echo -e '\033[0;36m1) Kur\033[0m'"
+									su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'"
+									read botguncelle
+									case $botguncelle in
+										1)
+											clear
+											su root -c "screen -X -S 'sinusbot001' quit"
+											su root -c "screen -X -S 'sinusbot002' quit"
+											su root -c "screen -X -S 'sinusbot003' quit"
+											clear
+											cd /opt/
+											su root -c "echo -e '\033[1;33mBot dosyası indiriliyor..\033[0m'"
+											sleep 1
+											wget -q https://www.sinusbot.com/dl/sinusbot-beta.tar.bz2 --no-check-certificate
+											su root -c "echo -e '\033[1;36mDosya başarıyla indirildi.\033[0m'"
+											sleep 2
+											su root -c "echo -e '\033[1;33mDosya kopyalanıyor..\033[0m'"
+											sleep 1
+											cp sinusbot-beta.tar.bz2 /opt/ts3soundboard1/
+											cp sinusbot-beta.tar.bz2 /opt/ts3soundboard2/
+											cp sinusbot-beta.tar.bz2 /opt/ts3soundboard3/
+											rm sinusbot-beta.tar.bz2
+											su root -c "echo -e '\033[1;36mDosyanın kopyalanması tamamlandı.\033[0m'"
+											sleep 2
+											clear
+											cd /opt/ts3soundboard1/
+											tar -xjf sinusbot-beta.tar.bz2
+											rm sinusbot-beta.tar.bz2
+											su root -c "screen -A -m -d -S 'sinusbot001' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+											su root -c "$sinusbot001"
+											echo ""
+											cd /opt/ts3soundboard2/
+											tar -xjf sinusbot-beta.tar.bz2
+											rm sinusbot-beta.tar.bz2
+											su root -c "screen -A -m -d -S 'sinusbot002' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+											su root -c "$sinusbot002"
+											echo ""
+											cd /opt/ts3soundboard3/
+											tar -xjf sinusbot-beta.tar.bz2
+											rm sinusbot-beta.tar.bz2
+											su root -c "screen -A -m -d -S 'sinusbot003' ./sinusbot -RunningAsRootIsEvilAndIKnowThat"
+											su root -c "$sinusbot003"
+											sleep 3
+											clear
+											su root -c "echo -e '\033[0;33m#################################'" 
+											su root -c "echo -e '#                               #'" 
+											su root -c "echo -e '#     \033[1;33mGüncelleme Tamamlandı\033[0;33m     #'"
+											su root -c "echo -e '#                               #'" 
+											su root -c "echo -e '#################################\033[0m'"
+											exit 0
+										;;
+										0)
+											clear
+											exit 0
+										;;
+										*)
+											clear
+											su root -c "$yanlistus"
+											exit 0
+										;;
+									esac
+								;;
+								0)
+									clear
+								;;
+								*)
+									clear
+									su root -c "$yanlistus"
+									exit 0
+								;;
+							esac
+						;;	
+					###################################################################################################### 
+						3)
+							clear
+							su root -c "echo -e '\033[0;33m################################################'" 
+							su root -c "echo -e '#                                              #'" 
+							su root -c "echo -e '#                  \033[1;31m! UYARI !\033[0;33m                   #'"
+							su root -c "echo -e '#    \033[1;33mBu komut tüm screenleri durduracaktır.\033[0;33m    #'"
+							su root -c "echo -e '#    \033[1;33mKomutu uygulamadan önce screen -ls\033[0;33m        #'"
+							su root -c "echo -e '#    \033[1;33mkomutu ile sinusbot dışında bir şey\033[0;33m       #'"
+							su root -c "echo -e '#    \033[1;33molup olmadığını kontrol edin.\033[0;33m             #'"
+							su root -c "echo -e '#                                              #'" 
+							su root -c "echo -e '################################################\033[0m'"
+							su root -c "echo -e '\033[0;36m1) Devam\033[0m'" 
+							su root -c "echo -e '\033[0;36m0) Çıkış\033[0m'" 
+							read devamscreen
+							case $devamscreen in
+								1)
+									clear
+									su root -c "pkill screen"
+									su root -c "echo -e '\033[0;33m#####################################'" 
+									su root -c "echo -e '#                                   #'" 
+									su root -c "echo -e '#     \033[1;33mTüm screenler durduruldu.\033[0;33m     #'"
+									su root -c "echo -e '#                                   #'" 
+									su root -c "echo -e '#####################################\033[0m'"
+									exit 0
+								;;
+								0)
+									clear
+									exit 0
+								;;
+								*)
+									clear
+									su root -c "$yanlistus"
+									exit 0
+								;;
+							esac
+						;;
+					###################################################################################################### 
+						0)
+							clear
+							exit 0
+						;;
+						*)
+							clear
+							su root -c "$yanlistus"
+							exit 0
+						;;
+					esac
+				;;
+				0) 
+					clear
+					exit 0
+				;; 
+				*) 
+					clear
+					su root -c "$yanlistus"
+					exit 0
+				;;
+			esac
+		fi
+	fi
+fi
